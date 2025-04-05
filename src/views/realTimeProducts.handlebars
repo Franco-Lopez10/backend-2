@@ -1,0 +1,12 @@
+<h1>Productos en tiempo real</h1>
+<div class="product-container">
+  {{#each products}}
+    <div class="product-card">
+      <img src="{{this.image}}" alt="{{this.name}}">
+      <h3>{{this.name}}</h3>
+      <p>{{this.description}}</p>
+      <p>${{this.price}}</p>
+      <button onclick="addToCart('{{this._id}}')">Agregar al carrito</button>
+    </div>
+  {{/each}}
+</div>
